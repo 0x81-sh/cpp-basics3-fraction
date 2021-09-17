@@ -1,0 +1,3 @@
+/mnt/c/Users/ulric/3AHIF/POS/C++/Basics/Fraction/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/ulric/3AHIF/POS/C++/Basics/Fraction/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+/mnt/c/Users/ulric/3AHIF/POS/C++/Basics/Fraction/cmake-build-debug-coverage/CMakeFiles/Fraction.dir

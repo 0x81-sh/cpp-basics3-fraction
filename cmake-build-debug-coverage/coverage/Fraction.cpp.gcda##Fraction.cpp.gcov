@@ -1,0 +1,140 @@
+        -:    0:Source:/mnt/c/Users/ulric/3AHIF/POS/C++/Basics/Fraction/Fraction.cpp
+        -:    0:Graph:/mnt/c/Users/ulric/3AHIF/POS/C++/Basics/Fraction/cmake-build-debug-coverage/CMakeFiles/Fraction.dir/Fraction.cpp.gcno
+        -:    0:Data:/mnt/c/Users/ulric/3AHIF/POS/C++/Basics/Fraction/cmake-build-debug-coverage/CMakeFiles/Fraction.dir/Fraction.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Fraction.h"
+        -:    2:
+function _Z3gcdii called 234 returned 100% blocks executed 100%
+      234:    3:int gcd (int a, int b) {
+      234:    4:    if (a == b) return a;
+      234:    4-block  0
+branch  0 taken 12 (fallthrough)
+branch  1 taken 222
+       12:    4-block  1
+        -:    5:
+      222:    6:    if (a > b) {
+      222:    6-block  0
+branch  0 taken 204 (fallthrough)
+branch  1 taken 18
+      204:    7:        return gcd(a - b, b);
+      204:    7-block  0
+call    0 returned 204
+        -:    8:    } else {
+       18:    9:        return gcd(b - a, a);
+       18:    9-block  0
+call    0 returned 18
+        -:   10:    }
+        -:   11:}
+        -:   12:
+        -:   13:// ---------------------------------------
+        -:   14:
+function _ZN8FractionC2Eii called 12 returned 100% blocks executed 100%
+       12:   15:Fraction::Fraction(int numerator, int denominator) : denominator(denominator), numerator(numerator) {
+       12:   16:    reduce();
+       12:   16-block  0
+call    0 returned 12
+       12:   17:}
+        -:   18:
+function _ZNK8Fraction12getNumeratorEv called 0 returned 0% blocks executed 0%
+    #####:   19:int Fraction::getNumerator() const {
+    #####:   20:    return numerator;
+    %%%%%:   20-block  0
+        -:   21:}
+        -:   22:
+function _ZN8Fraction12setNumeratorEi called 0 returned 0% blocks executed 0%
+    #####:   23:void Fraction::setNumerator(int numerator) {
+    #####:   24:    Fraction::numerator = numerator;
+    #####:   25:    reduce();
+    %%%%%:   25-block  0
+call    0 never executed
+    #####:   26:}
+        -:   27:
+function _ZNK8Fraction14getDenominatorEv called 0 returned 0% blocks executed 0%
+    #####:   28:int Fraction::getDenominator() const {
+    #####:   29:    return denominator;
+    %%%%%:   29-block  0
+        -:   30:}
+        -:   31:
+function _ZN8Fraction14setDenominatorEi called 0 returned 0% blocks executed 0%
+    #####:   32:void Fraction::setDenominator(int denominator) {
+    #####:   33:    Fraction::denominator = denominator;
+    #####:   34:    reduce();
+    %%%%%:   34-block  0
+call    0 never executed
+    #####:   35:}
+        -:   36:
+function _ZNK8Fraction3mulERKS_ called 1 returned 100% blocks executed 100%
+        1:   37:Fraction Fraction::mul(const Fraction &ref) const {
+        1:   38:    return {numerator * ref.numerator, denominator * ref.denominator};
+        1:   38-block  0
+call    0 returned 1
+        -:   39:}
+        -:   40:
+function _ZNK8Fraction3divERKS_ called 1 returned 100% blocks executed 100%
+        1:   41:Fraction Fraction::div(const Fraction &ref) const {
+        1:   42:    return {numerator * ref.denominator, denominator * ref.numerator};
+        1:   42-block  0
+call    0 returned 1
+        -:   43:}
+        -:   44:
+function _ZNK8Fraction5equalERKS_ called 4 returned 100% blocks executed 83%
+        4:   45:bool Fraction::equal(const Fraction &ref) const {
+       4*:   46:    return denominator == ref.denominator && numerator == ref.numerator;
+        4:   46-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 0
+        4:   46-block  1
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0
+        4:   46-block  2
+    %%%%%:   46-block  3
+        4:   46-block  4
+        -:   47:}
+        -:   48:
+function _ZNK8FractionmlERKS_ called 1 returned 100% blocks executed 100%
+        1:   49:Fraction Fraction::operator*(const Fraction &ref) const {
+        1:   50:    return mul(ref);
+        1:   50-block  0
+call    0 returned 1
+        -:   51:}
+        -:   52:
+function _ZNK8FractiondvERKS_ called 1 returned 100% blocks executed 100%
+        1:   53:Fraction Fraction::operator/(const Fraction &ref) const {
+        1:   54:    return div(ref);
+        1:   54-block  0
+call    0 returned 1
+        -:   55:}
+        -:   56:
+function _ZNK8FractioneqERKS_ called 4 returned 100% blocks executed 100%
+        4:   57:bool Fraction::operator==(const Fraction &ref) const {
+        4:   58:    return equal(ref);
+        4:   58-block  0
+call    0 returned 4
+        -:   59:}
+        -:   60:
+function _ZlsRSoRK8Fraction called 0 returned 0% blocks executed 0%
+    #####:   61:std::ostream &operator<<(std::ostream &os, const Fraction &fraction) {
+    #####:   62:    os << "[" << fraction.numerator << "/" << fraction.denominator << "]";
+    %%%%%:   62-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    #####:   63:    return os;
+        -:   64:}
+        -:   65:
+function _ZN8Fraction6reduceEv called 12 returned 100% blocks executed 100%
+       12:   66:void Fraction::reduce() {
+       12:   67:    int gcdV = gcd(abs(numerator), denominator);
+       12:   67-block  0
+call    0 returned 12
+       12:   68:    if (gcdV == 1) return;
+branch  0 taken 11 (fallthrough)
+branch  1 taken 1
+       11:   68-block  0
+        -:   69:
+        1:   70:    numerator /= gcdV;
+        1:   71:    denominator /= gcdV;
+        1:   71-block  0
+        -:   72:}

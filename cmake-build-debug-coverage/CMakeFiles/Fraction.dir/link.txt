@@ -1,0 +1,1 @@
+/usr/bin/g++-11 --coverage -g CMakeFiles/Fraction.dir/main.cpp.o CMakeFiles/Fraction.dir/Fraction.cpp.o -o Fraction 

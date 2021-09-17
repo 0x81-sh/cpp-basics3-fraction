@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/ulric/3AHIF/POS/C++/Basics/Fraction/Fraction.cpp
+Fraction.h
+/mnt/c/Users/ulric/3AHIF/POS/C++/Basics/Fraction/Fraction.h
+
+/mnt/c/Users/ulric/3AHIF/POS/C++/Basics/Fraction/Fraction.h
+cmath
+-
+ostream
+-
+
+/mnt/c/Users/ulric/3AHIF/POS/C++/Basics/Fraction/main.cpp
+iostream
+-
+cassert
+-
+Fraction.h
+/mnt/c/Users/ulric/3AHIF/POS/C++/Basics/Fraction/Fraction.h
+
